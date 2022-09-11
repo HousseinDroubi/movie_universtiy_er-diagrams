@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2022 at 06:46 PM
+-- Generation Time: Sep 11, 2022 at 08:14 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -42,12 +42,12 @@ CREATE TABLE `course` (
 INSERT INTO `course` (`crn`, `name`, `start_time`, `end_time`, `room_id`) VALUES
 (1, 'BIF200', '16:58:01', '18:58:01', 1),
 (2, 'BIF300', '12:58:01', '18:58:01', 2),
-(3, 'CS200', '07:59:29', '20:59:29', 3),
-(4, 'CS400', '11:02:17', '10:02:17', 1),
-(5, 'CS600', '10:03:43', '01:03:43', 3),
-(6, 'CS250', '11:04:42', '23:04:42', 4),
-(7, 'CS275', '12:04:42', '23:04:42', 2),
-(8, 'CS275', '09:04:42', '12:04:42', 4);
+(3, 'CSC200', '07:59:29', '20:59:29', 3),
+(4, 'CSC400', '07:59:29', '10:02:17', 1),
+(5, 'CSC600', '10:03:43', '01:03:43', 3),
+(6, 'CSC270', '11:04:42', '23:04:42', 4),
+(7, 'CSC272', '12:04:42', '23:04:42', 2),
+(8, 'CSC275', '09:04:42', '12:04:42', 4);
 
 -- --------------------------------------------------------
 
@@ -81,6 +81,18 @@ CREATE TABLE `enrolled` (
   `course_crn` int(11) NOT NULL,
   `credit_status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `enrolled`
+--
+
+INSERT INTO `enrolled` (`student_id`, `course_crn`, `credit_status`) VALUES
+(1, 1, 3),
+(2, 2, 3),
+(3, 3, 3),
+(6, 5, 3),
+(8, 7, 3),
+(10, 8, 3);
 
 -- --------------------------------------------------------
 
